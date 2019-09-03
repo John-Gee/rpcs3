@@ -37,10 +37,7 @@ OpenALBackend::OpenALBackend()
 
 OpenALBackend::~OpenALBackend()
 {
-	if (alIsSource(m_source))
-	{
-		Close();
-	}
+	Close();
 
 	if (ALCcontext* m_context = alcGetCurrentContext())
 	{
